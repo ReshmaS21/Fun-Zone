@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Saira&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  font-family: "Saira", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1 {
+  font-size: 4.2rem;
+}
+
+body {
+  background: #000000;
+  color: #eeeeee;
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-container {
+  font-size: 4rem;
+  height: calc(100vh - 6.6rem);
+  justify-content: center;
+  z-index: 99;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nav-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  box-shadow: 0px 0px 10px #7476e3, 0 0px 20px #5c9ead;
+  width: 100vw;
+  z-index: 99;
+}
+.nav-bar .nav-item {
+  font-size: 2.5rem;
+  padding: 1.3rem 3rem 1.3rem 3rem;
+  text-transform: uppercase;
+  display: inherit;
+}
+.nav-bar .nav-item:hover {
+  background: #748ae3;
+}
+
+.fixed-to-top {
+  position: fixed;
+  top: 0;
+  -webkit-backdrop-filter: blur(12px);
+          backdrop-filter: blur(12px);
+  z-index: 199;
+}
+
+.content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.content-container div {
+  display: inherit;
+  flex-direction: inherit;
+  align-items: inherit;
+  margin: 8rem;
+  z-index: 99;
+}
+.content-container p {
+  font-size: 1.8rem;
+  text-align: center;
+  margin: 0.6rem;
+  line-height: 2.5rem;
+  padding: 0rem 12rem 0rem 12rem;
+}
+
+#app {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}/*# sourceMappingURL=style.css.map */
+
+.snow, .snow2{
+  position: absolute;
+  top: 0;
+  left:0;
+  width: 100%;
+  height:100%;
+  background: url(snow.png);
+  background-position: 0 0;
+}
+.snow{
+  background-size: 70em;
+  animation: snowfall 30s linear infinite;
+}
+.snow2{
+  background-size: 50em;
+  animation: snowfall2 30s linear infinite;
+  opacity: 0.5;
+}
+
+@keyframes snowfall{
+  100%{
+      background-position: 70em 70em;
+  }
+}
+@keyframes snowfall2{
+  100%{
+      background-position: 50em 0;
+  }
+}
